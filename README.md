@@ -7,11 +7,24 @@ Generate scaffolding for new Catfish widgets.
 
 ## Installation
 
+Install yeoman globally if you don't already have it.
+```sh
+npm install --global yo
 ```
+
+Install the generator.
+```sh
 npm install --save generator-cf-widget
 ```
 
 ## Usage
+
+Run from the root of your catfish site.
+```sh
+yo cf-widget
+```
+
+You will then have the basic files for your widget in `components/admin/widgets` and `components/site/widgets`.
 
 ## Credits
 [Bala Clark](https://github.com/balaclark/)

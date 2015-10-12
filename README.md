@@ -14,7 +14,7 @@ npm install --global yo
 
 Install the generator.
 ```sh
-npm install --save generator-cf-widget
+npm install --global generator-cf-widget
 ```
 
 ## Usage

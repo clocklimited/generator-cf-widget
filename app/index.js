@@ -39,23 +39,33 @@ CfWidgetGenerator = generators.Base.extend(
         this.widgetFilename = slugg(answers.name)
         this.widgetDescription = answers.description
         this.createAdminWidget = answers.admin === 'yes'
-        this.factories = []
-        if (answers.section) this.factories.push('widgetFactory')
-        if (answers.article) this.factories.push('articleLayoutWidgetFactory')
+        this.adminFactories = []
+        this.siteFactories = [ 'widgetFactory' ]
+        if (answers.section) {
+          this.adminFactories.push('widgetFactory')
+        }
+        if (answers.article) {
+          this.adminFactories.push('articleLayoutWidgetFactory')
+        }
         done()
       }.bind(this))
     }
 
   , createWidget: function () {
-      // TODO for article body widgets, change directory to article-layout/name
       var adminDir = 'components/admin/widgets/' + this.widgetFilename
+        , siteDir = 'components/site/widgets/' + this.widgetFilename
+
       if (this.createAdminWidget) {
         this.template('admin/_init.js', path.join(adminDir, 'init.js'))
         this.template('admin/models/_model.js', path.join(adminDir, 'models/model.js'))
         this.template('admin/templates/_form.jade', path.join(adminDir, 'templates/form.jade'))
         this.template('admin/views/_form.js', path.join(adminDir, 'views/form.js'))
       }
-      // TODO generate site widget
+
+      this.template('site/_init.js', path.join(siteDir, 'init.js'))
+      this.copy('site/templates/widget.jade', path.join(siteDir, 'templates/widget.jade'))
+      this.copy('site/test/template.test.js', path.join(siteDir, 'test/template.test.js'))
+      this.copy('site/views/widget.js', path.join(siteDir, 'views/widget.js'))
     }
   })
 

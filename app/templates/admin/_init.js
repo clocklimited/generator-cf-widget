@@ -1,10 +1,10 @@
 module.exports = initWidget
 
-function initWidget() {
+function initWidget () {
   return { <%= widgetId %>Widget: init }
 }
 
-function init(serviceLocator, done) {
+function init (serviceLocator, done) {
 
   var widget =
     { editView: require('./views/form')

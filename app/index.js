@@ -24,7 +24,7 @@ CfWidgetGenerator = generators.Base.extend(
             , default: 'yes'
             }
           , { name: 'section'
-            , message: 'Widget can appear in sections layouts?'
+            , message: 'Widget can appear in section layouts?'
             , default: 'yes'
             }
           , { name: 'article'

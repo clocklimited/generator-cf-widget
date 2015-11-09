@@ -13,7 +13,7 @@ function init (serviceLocator, done) {
     , name: '<%= widgetName %>'
     , description: '<%= widgetDescription %>'
     }
-  <% adminFactories.forEach(function (factoryName) { %>
+<% adminFactories.forEach(function (factoryName) { %>
   serviceLocator.<%= factoryName %>.register('<%= widgetId %>', widget)<% }) %>
 
   done()

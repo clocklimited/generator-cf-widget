@@ -10,6 +10,8 @@ module.exports = BaseModel.extend(
       var returnValue = {}
 
       schemata.validate(schemata.cast(attributes), function (error, errors) {
+        // TODO better error handling
+        if (error && console) console.error(error)
         returnValue = errors
       })
 

@@ -4,7 +4,7 @@
   "files": [
     "app"
   ],
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
     "lint": "eslint -f unix .",
     "inspect": "jsinspect",

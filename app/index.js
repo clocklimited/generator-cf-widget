@@ -41,10 +41,10 @@ CfWidgetGenerator = generators.Base.extend(
         this.createAdminWidget = answers.admin === 'yes'
         this.adminFactories = []
         this.siteFactories = [ 'widgetFactory' ]
-        if (answers.section) {
+        if (answers.section === 'yes') {
           this.adminFactories.push('widgetFactory')
         }
-        if (answers.article) {
+        if (answers.article === 'yes') {
           this.adminFactories.push('articleLayoutWidgetFactory')
         }
         done()

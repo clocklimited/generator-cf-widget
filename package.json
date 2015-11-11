@@ -33,6 +33,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:balaclark/generator-cf-widget.git"
+    "url": "git@github.com:clocklimited/generator-cf-widget.git"
   }
 }

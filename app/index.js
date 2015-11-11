@@ -19,10 +19,6 @@ CfWidgetGenerator = generators.Base.extend(
           , { name: 'description'
             , message: 'Describe your widget.'
             }
-          , { name: 'admin'
-            , message: 'Do you need an admin widget?'
-            , default: 'yes'
-            }
           , { name: 'section'
             , message: 'Widget can appear in section layouts?'
             , default: 'yes'
@@ -55,12 +51,10 @@ CfWidgetGenerator = generators.Base.extend(
       var adminDir = 'components/admin/widgets/' + this.widgetFilename
         , siteDir = 'components/site/widgets/' + this.widgetFilename
 
-      if (this.createAdminWidget) {
-        this.template('admin/_init.js', path.join(adminDir, 'init.js'))
-        this.template('admin/models/_model.js', path.join(adminDir, 'models/model.js'))
-        this.template('admin/templates/_form.jade', path.join(adminDir, 'templates/form.jade'))
-        this.template('admin/views/_form.js', path.join(adminDir, 'views/form.js'))
-      }
+      this.template('admin/_init.js', path.join(adminDir, 'init.js'))
+      this.template('admin/models/_model.js', path.join(adminDir, 'models/model.js'))
+      this.template('admin/templates/_form.jade', path.join(adminDir, 'templates/form.jade'))
+      this.template('admin/views/_form.js', path.join(adminDir, 'views/form.js'))
 
       this.template('site/_init.js', path.join(siteDir, 'init.js'))
       this.copy('site/templates/widget.jade', path.join(siteDir, 'templates/widget.jade'))

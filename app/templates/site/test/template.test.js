@@ -4,7 +4,7 @@ var compileJade = require('../../../../../site/lib/compile-jade')
   , cheerio = require('cheerio')
   , mockData = { widget: { displayOptions: [] } }
 
-describe('Share Widget: Template', function () {
+describe('<%= widgetName %> Widget: Template', function () {
 
   describe('Widget', function () {
 

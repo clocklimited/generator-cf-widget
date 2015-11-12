@@ -2,8 +2,8 @@
 
 Generate scaffolding for new Catfish widgets.
 
-[![build status](https://secure.travis-ci.org/balaclark/generator-cf-widget.svg)](http://travis-ci.org/balaclark/generator-cf-widget)
-[![dependency status](https://david-dm.org/balaclark/generator-cf-widget.svg)](https://david-dm.org/balaclark/generator-cf-widget)
+[![build status](https://secure.travis-ci.org/clocklimited/generator-cf-widget.svg)](http://travis-ci.org/clocklimited/generator-cf-widget)
+[![dependency status](https://david-dm.org/clocklimited/generator-cf-widget.svg)](https://david-dm.org/clocklimited/generator-cf-widget)
 
 ## Installation
 

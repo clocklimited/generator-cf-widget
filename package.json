@@ -16,20 +16,20 @@
   "author": "Bala Clark <bala.clark@clock.co.uk>",
   "license": "ISC",
   "dependencies": {
-    "camel-case": "^1.1.2",
-    "chalk": "^1.1.1",
-    "slugg": "^0.1.2",
-    "yeoman-generator": "^0.20.3"
+    "camel-case": "^3.0.0",
+    "chalk": "^2.4.2",
+    "slugg": "^1.2.1",
+    "yeoman-generator": "^4.0.1"
   },
   "devDependencies": {
-    "eslint": "^1.4.1",
+    "eslint": "^6.0.0",
     "eslint-config-clock": "^1.0.0",
-    "eslint-config-standard": "^4.3.2",
-    "eslint-plugin-standard": "^1.3.0",
-    "istanbul": "^0.3.19",
-    "jsinspect": "^0.7.0",
-    "mocha": "^2.3.2",
-    "mock-fs": "^3.3.0"
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-standard": "^4.0.0",
+    "istanbul": "^0.4.5",
+    "jsinspect": "^0.12.7",
+    "mocha": "^6.1.4",
+    "mock-fs": "^4.10.1"
   },
   "repository": {
     "type": "git",
